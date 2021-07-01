@@ -137,12 +137,12 @@ label {
     border: 1px solid black;
 }
 
-/* @keyframes slide {
-    0% {
+ @keyframes slide {
+  0% {
         transform: scale(0.2);
     }
     
     100% {
         transform: scaleX(1);
     }
-} */
+} 
