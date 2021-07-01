@@ -8,7 +8,7 @@
 /* VARS */
 
 :root {
-    --background-primary
+    --background-primary:
 }
 
 body {
@@ -22,20 +22,33 @@ body {
 
 main {
     display: flex;
-    box-shadow: 8px -7px 33px 2px rgba(0, 0, 0.15, 0.4);
+    justify-content: center;
     border-radius: 1rem;
+    width: 60rem;
+    height: 20rem;
+   
+}
+
+.label {
+    height: 100%; 
+    width: 50%;
+    border-radius: 1rem;
+    
+    
 }
 
 /* IMAGE MAIN */
 
 .img-main {
+    box-shadow: 8px -7px 33px 2px rgba(0, 0, 0.15, 0.4);
     background-color: black;
-    max-width: 300px;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 1rem ;
+
 }
 
 .img-main div {
@@ -43,6 +56,7 @@ main {
     border-radius: 50%;
     padding: 1.2rem;
     max-width: 150px;
+    width: 100%;
 }
 
 .img-main svg {
@@ -50,20 +64,38 @@ main {
     height: 100%;
 }
 
+label {
+    cursor: pointer;
+}
 /* TEXT MAIN */
 
+#check-box {
+    display: none;
+}
+
 .text-main {
+    box-shadow: 8px -7px 33px 2px rgba(0, 0, 0.15, 0.4);
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
     max-width: 600px;
     width: 100%;
     padding: 1rem;
     border-radius: 0 1rem 1rem 0;
-    visibility: visible;
+    margin-left: -18px;
+    display: none;
+    animation: slide;
+    transition: all 2s linear;
+    animation-delay: 1s;
+    animation-duration: 5s;
+
 }
 
-.img-main:hover, {
-    visibility: visible;
+#check-box:checked ~ .text-main  {
+    display: block;
+}
+
+#check-box:checked ~ .img-main {
+    border-radius: 1rem 0 0 1rem;
 }
 
 .text-top {
@@ -84,6 +116,7 @@ main {
 .text-center p {
     width: 90%;
 }
+
 .text-footer {
     display: flex;
     align-items: center;
@@ -103,4 +136,13 @@ main {
     background-color: #2572F6;
     border: 1px solid black;
 }
+
+/* @keyframes slide {
+    0% {
+        transform: scale(0.2);
+    }
     
+    100% {
+        transform: scaleX(1);
+    }
+} */
