@@ -32,9 +32,7 @@ main {
 .label {
     height: 100%; 
     width: 50%;
-    border-radius: 1rem;
-    
-    
+    border-radius: 1rem;    
 }
 
 /* IMAGE MAIN */
@@ -82,11 +80,9 @@ label {
     padding: 1rem;
     border-radius: 0 1rem 1rem 0;
     margin-left: -18px;
+    z-index:1;
     display: none;
-    animation: slide;
-    transition: all 2s linear;
-    animation-delay: 1s;
-    animation-duration: 5s;
+    animation: slide 2s; 
 
 }
 
@@ -137,12 +133,39 @@ label {
     border: 1px solid black;
 }
 
- @keyframes slide {
-  0% {
-        transform: scale(0.2);
+.seta:hover .seta i {
+  margin-left: 5px;
+}
+
+@keyframes slide {
+    0% {
+        scale: 0.8;
     }
     
     100% {
-        transform: scaleX(1);
+        scale: 1.1;    
     }
-} 
+}
+
+@media (max-width: 778px)
+{
+    main {
+        height: 22.5rem;
+        margin: 5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    main {
+        display: block;
+        width: 25rem;
+        height: 15rem;
+    }
+
+    .text-main {
+        margin: 0;
+        border-radius: 0 0 1rem 1rem;
+        margin-top: -10px;
+        
+    }
+}
